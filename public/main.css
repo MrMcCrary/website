@@ -1,19 +1,33 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
+
+html {
+  overflow-y: scroll;
+}
+
 .title {
     text-align: center;
     font-size: 4em;
+    padding: 2%;
 }
 .title a:link {
     color: black;
     text-decoration: none;
+    
 }
-
+.test-sticky {
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
 .navbar {
     margin: 0 auto;
     text-align: center;
     width: 33%;
+    position: sticky;
+    top:0;
 }
 
 .nav-item {
@@ -44,6 +58,7 @@
 .content a:link {
     color: black;
     text-decoration: none;
+
 }
 table {
     width:100%
@@ -62,4 +77,22 @@ table {
     color: black;
     text-decoration: none;
     
+}
+
+.collapsed-content {
+    padding: 0 3%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    transition: padding 0.1s linear;
+}
+
+.collapsible {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+    font-size: 200%;
+    outline: 0;
 }

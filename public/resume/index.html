@@ -13,10 +13,96 @@
     </div>
     <div style="width:100%; text-align:center;">
         <div class="content" style="height: 500px;"> 
-            <h2 style="margin:0; padding-top: 50%"> Nothing to see here, yet.</h2>
+            <div style="padding: 5%; text-align: left; overflow:overlay">
+            
+                    <button class="collapsible">Education</button>
+                    <div class="collapsed-content">
+                        <h3>10th Grade</h3>
+                        <ul>
+                            <li>GPA: 4.2 (+0.22)</li>
+                            <li>Unweighted GPA: 3.8 (+0)</li>
+                            <li>Honors Courses: English, Math, Chemistry, Art History, Statistics, Greek History</li>
+                        </ul>
+                        <h3>9th Grade</h3>
+                        <ul>
+                            <li>GPA: 3.98</li>
+                            <li>Unweighted GPA: 3.80</li>
+                            <li>Honors Courses: English, Math, Chemistry, Art History</li>
+                        </ul>
+                    </div>
+                
+            
+                    <button class="collapsible">Testing</button>
+                    <div class="collapsed-content">
+                        <h3>PACT: 32 (E35 R36 M29 S31) <h3>
+                        <h3>SAT: 1490 (R36 E35 S31 M29) <h3>
+                    </div>
+                
+            
+                    <button class="collapsible">Extra Cirriculars</button>
+                    <div class="collapsed-content">
+                        <h3>Model United Nations (9th-)</h3>
+                        <ul>
+                            <li>11th: Co-President</li>
+                            <li>10th: Ambassador</li>
+                            <li>9th: Repersentative/Founding Member</li>
+                        </ul>
+                        <h3>Ultimate Frisbee (9th-)</h3>
+                        <ul>
+                            <li>10th: Undefeated Reagional League Record</li>
+                            <li>9th: 2nd Place State Championships</li>                            
+                        </ul>
+                        <h3>Student Council (10th-)</h3>
+                        <ul>
+                            <li>11th: Interim Treasuer</li>
+                            <li>10th: Repersentative</li>                            
+                        </ul>
+                        <h3>Western Aerospace Scholars (2018, 2019)</h3>
+                        <ul>
+                            <li> Judges' Choice Presentation </li>
+                            <li> System Manager (elected by peers) </li>
+                        </ul>
+                        <h3>Foreign Exchange (August-November, 2018) </h3>
+                        <h3>Student Ambassador (9th-) </h3>
 
+                    </div>
+                
+                
+            </div>
         </div>
         <div class="credit">Icons made by <a href="https://www.flaticon.com/authors/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>    </div>
     </div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        content.style.padding = null;
+    } else {
+        for (j = 0; j < coll.length; j++){
+            if (i !=j){
+                var otherContent = this.parentNode.parentNode.getElementsByClassName("collapsed-content")[j]
+                otherContent.style.maxHeight = null;
+                otherContent.style.padding = null;
+            }
+        }
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.padding = "3%"
+    } 
+  });
+}
+</script>
+
+
+
 </body>
 </html>

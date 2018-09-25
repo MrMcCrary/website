@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href="main.css">
+        <title> The Annoying Website</title>
+    </head>
+  <body>
+    <div class="title-bar">
+        <span>
+            <form onsubmit= "SubmitHandler(document.getElementsByName('InputField')[0].value);return false" >
+                <input type="text" name="InputField" placeholder="Enter Viewkey">
+            </form>
+        </span>
+    </div>
+    <div class="main">
+        <span class="videos"></span>
+        <span title="Add Video" class="CreateNewButton" onclick="CreateNewViewPort(lastURL)">+</span>
+        
+    </div>
+
+    <script>
+        // DECLARING PRESETS
+        var apiKey = '2xVmWdmRmbT1OygZ4edwcMfCREidfzYlmY5ecMEp2k26gEY1HOWyVSWgUPpp'
+        var CAIDAN = ["pnusoYRVro8","g-sgw9bPV4A","NdH-m83IxnQ"]
+        var CHILL = ["-kBhum7f4rI","pnusoYRVro8"]
+        var MEMES = [   "q6EoRBvdVPQ","6bnanI9jXps","cuNhfSM-144",
+                        "EWF8Nfm-LLk","0r--lCyPjRY","zMtj4yJKuzk",
+                        "1Bix44C1EzY","aRsWk4JZa5k","VhJ7NmU6lJI",
+                        "QBOM70hqlUY","29s6fS7Y5dY","RP5GqI4Jukc",
+                        "Kppx4bzfAaE","okMeAP9h4xI"]
+
+        if (document.URL.split("?")[1] == undefined || document.URL.split("?")[1] == ''){
+            var lastURL = "pnusoYRVro8"
+        } else {
+            var lastURL = document.URL.split("?")[1];
+        }
+
+        function CreateNewViewPort(viewkey){
+            var uFrame = document.createElement('iframe');
+            uFrame.id="player"
+            uFrame.type="text/html"
+            uFrame.width="200"
+            uFrame.height="200"
+            uFrame.src="http://www.youtube.com/embed/"+viewkey+'?loop=1&playlist='+viewkey+'&autoplay=1&showinfo=0&controls=0'
+            document.getElementsByClassName('videos')[0].appendChild(uFrame)
+        }
+
+        function Presets (preset) {
+            for (i=0;i<preset.length;i++){
+                CreateNewViewPort(preset[i])
+            }
+            lastURL = preset[preset.length-1]
+        }
+
+
+
+        function SubmitHandler (info) {
+            if (info == 'CAIDAN'){
+                Presets(CAIDAN);
+            } else if (info == 'CHILL'){
+                Presets(CHILL);
+            } else if (info == 'MEMES'){
+                Presets(MEMES)
+            } else {
+                CreateNewViewPort(info);
+                lastURL = info;
+            }
+        }
+    </script>
+  </body>
+</html>
