@@ -3,20 +3,19 @@
     margin: 0;
 }
 
-html {
-  overflow-y: scroll;
-}
+html::-webkit-scrollbar { width: 0 }
 
 .title {
     text-align: center;
     font-size: 4em;
     padding: 2%;
 }
-.title a:link {
+.title a:link, a:visited, a:active {
     color: black;
     text-decoration: none;
-    
 }
+
+
 .test-sticky {
     background-color: white;
     position: sticky;
@@ -33,14 +32,41 @@ html {
 .nav-item {
    color: black;
    display: inline-block;
-   width: 33.333%;
    text-decoration:none; 
    font-weight: bold; 
    font-size: 200%;
    text-align:center;
-   padding-bottom: 3%;
-   padding-top: 3%;
+   width: 33.333%;
+   padding: 3% 0 3% 0;
 }
+
+.inactive {
+    transition: background-color ease-in 0.25s;
+}
+#projects-link {
+    background-color: #3772ff;
+    
+}
+#projects-link.inactive:hover{
+    background-color: #6D98FF;
+}
+
+#resume-link {
+    background-color: #df2935;
+    
+}
+#resume-link.inactive:hover{
+    background-color: #E7636C;
+}
+
+#contact-link {
+    background-color: #fdca40;
+    
+}
+#contact-link.inactive:hover{
+    background-color: #FDD362;
+}
+
 
 .page-indicator {
     width: 100%;
