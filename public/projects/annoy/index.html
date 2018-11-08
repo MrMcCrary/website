@@ -5,17 +5,16 @@
         <title> The Annoying Website</title>
     </head>
   <body>
-    <div class="title-bar">
-        <span>
-            <form onsubmit= "SubmitHandler(document.getElementsByName('InputField')[0].value);return false" >
-                <input type="text" name="InputField" placeholder="Enter Viewkey">
-            </form>
-        </span>
-    </div>
     <div class="main">
         <span class="videos"></span>
-        <span title="Add Video" class="CreateNewButton" onclick="CreateNewViewPort(lastURL)">+</span>
-        
+        <span class="CreateNewButton">
+            <span title="Add Video" onclick="CreateNewViewPort(lastURL)" id="video-button">+</span>
+            <span>
+                <form onsubmit= "SubmitHandler(document.getElementsByName('InputField')[0].value);return false" >
+                    <input type="text" name="InputField" placeholder="Enter Viewkey">
+                </form>
+            </span>
+        </span>
     </div>
 
     <script>
@@ -39,8 +38,8 @@
             var uFrame = document.createElement('iframe');
             uFrame.id="player"
             uFrame.type="text/html"
-            uFrame.width="200"
-            uFrame.height="200"
+            uFrame.width="200px"
+            uFrame.height="200px"
             uFrame.src="http://www.youtube.com/embed/"+viewkey+'?loop=1&playlist='+viewkey+'&autoplay=1&showinfo=0&controls=0'
             document.getElementsByClassName('videos')[0].appendChild(uFrame)
         }
