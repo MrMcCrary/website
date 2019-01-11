@@ -1,6 +1,10 @@
 # website
 Personal Website
 
+*** Absolute linguini, enter at the risk of your sanity ***
+
+
+
 Palette (sourced from coolors.co):
 
 Yellow: #fdca40
