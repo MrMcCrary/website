@@ -1,7 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    font-weight: bold;
 }
 
 html::-webkit-scrollbar { width: 0 }
@@ -103,6 +102,7 @@ html::-webkit-scrollbar { width: 0 }
     min-width: 25em;
     max-width:33.333%;
     text-align: center;
+    font-weight: bold;
 }
 
 #main-content a:link {
@@ -145,4 +145,13 @@ table {
     font-weight: bold;
     font-size: 200%;
     outline: 0;
+}
+
+#blog {
+    margin: 0 auto;
+    background-color: #e6e8e6;
+    min-width: 25em;
+    max-width:33.333%;
+    text-align: center;
+    font-weight: normal; 
 }

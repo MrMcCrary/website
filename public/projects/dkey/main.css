@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 90px;
+    border: 2px solid black;
+    padding: 2px;
+}
+
+.CreateNewButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    height: 200px;
+    width: 200px;
+
+}
+#video-button{
+    font-size:150px;
+    transition: opacity 0.2s ease-in;
+}
+
+#video-button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
